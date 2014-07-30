@@ -14,7 +14,7 @@ nagios-service:
 {% set hosts = salt['pillar.get']('nagios:server:hosts', {}) -%}
 
 {%- for key, host in hosts.iteritems() %}
-/etc/nagios3/conf.d/{{host.hostname}}_nagios2.conf:
+/etc/nagios3/conf.d/{{host.hostname}}_nagios2.cfg:
   file.managed:
     - source: salt://nagios/server/files/host.conf
     - template: jinja
