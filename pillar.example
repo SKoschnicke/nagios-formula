@@ -2,6 +2,15 @@ nagios:
   server:
     log_file: /var/nagios/nagios.log
     resource_file: /etc/nagios/resource.cfg
+    hosts:
+      onehost:
+        hostname: onehost
+        alias: one host
+        address: 127.0.0.2
+      anotherhost:
+        hostname: anotherhost
+        alias: another host
+        address: 127.0.0.3
   nrpe:
     server_address: 127.0.0.1
     server_port: 5666
